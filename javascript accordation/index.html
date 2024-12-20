@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Tutorial</title>
+    <style>
+        .accordion {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 450px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        .accordion-title {
+            color: #fff;
+            background-color: red;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .accordion-title:hover {
+            background: rgb(167, 26, 26);
+        }
+        .accordion-content {
+            display: none;
+            background: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Accordion Tutorial</h1>
+
+    <div class="accordion">
+        <div class="accordion-title">Accordion Title 1</div>
+        <div class="accordion-content">
+            According content 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quidem repellendus labore, at voluptate nisi asperiores blanditiis rerum accusamus laudantium commodi officiis totam, libero ad, sint dolorum optio eveniet nam.
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-title">Accordion Title 2</div>
+        <div class="accordion-content">
+            According content 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quidem repellendus labore, at voluptate nisi asperiores blanditiis rerum accusamus laudantium commodi officiis totam, libero ad, sint dolorum optio eveniet nam.
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-title">Accordion Title 3</div>
+        <div class="accordion-content">
+            According content 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quidem repellendus labore, at voluptate nisi asperiores blanditiis rerum accusamus laudantium commodi officiis totam, libero ad, sint dolorum optio eveniet nam.
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-title">Accordion Title 4</div>
+        <div class="accordion-content">
+            According content 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quidem repellendus labore, at voluptate nisi asperiores blanditiis rerum accusamus laudantium commodi officiis totam, libero ad, sint dolorum optio eveniet nam.
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const content = title.nextElementSibling;
+                const isVisible = content.style.display === 'block';
+                content.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
